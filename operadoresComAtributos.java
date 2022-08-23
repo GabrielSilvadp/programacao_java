@@ -9,22 +9,22 @@ public class Exercicio1 {
         double valorFinal = 0.0;
 
         System.out.println("Conta de luz: ");
-        double contaDeLuz = valorFinal += scanner.nextDouble();
+        valorFinal += scanner.nextDouble();
 
         System.out.println("Conta de água: ");
-        double contaDeAgua = valorFinal += scanner.nextDouble();
+        valorFinal += scanner.nextDouble();
 
         System.out.println("Conta de telefone: ");
-        double contaDeTelefone = valorFinal += scanner.nextDouble();
+        valorFinal += scanner.nextDouble();
 
         System.out.println("Conta da escola do filho: ");
-        double escolaDoFilho = valorFinal += scanner.nextDouble();
+        valorFinal += scanner.nextDouble();
 
         System.out.println("Fatura do cartão: ");
-        double faturaDoCartao = valorFinal += scanner.nextDouble();
+        valorFinal += scanner.nextDouble();
 
         System.out.println("Conta do supermercado: ");
-        double contaDoSupermercado = valorFinal += scanner.nextDouble();
+        valorFinal += scanner.nextDouble();
 
         System.out.println("Resultado: " + valorFinal);
 
