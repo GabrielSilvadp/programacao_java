@@ -1,0 +1,54 @@
+package Pasta_Exercicios;
+
+import java.util.Scanner;
+
+public class ExercicioPrimeiroMetodo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Bem-Vindo");
+
+        imprimirTraco();//variáveis não tem parenteses, mas MÉTODO sim!
+
+        String[] cursos = new String[]{"Jakarta EE", "Spring", "Java OO Avançado"};
+        System.out.println("Escolha dentre os cursos abaixo: ");
+        for (int i = 0; i < cursos.length; i++) {
+            System.out.println("[" + i + "]" + cursos[i]);
+        }
+        System.out.print("O curso que você deseja é: ");
+        Integer posicaoCursoEscolhido = scanner.nextInt();
+        Boolean posicaoValida = posicaoCursoEscolhido >= 0 && posicaoCursoEscolhido < cursos.length;
+
+        if (!posicaoValida) {
+            statusexit();//MÉTODO do exercício
+        }
+        imprimirTraco();
+        String[] formasPagamento = new String[]{"Cartão", "Boleto"};
+        System.out.println("Escolha dentre as formas de pagamento abaixo: ");
+        for (int j = 0; j < formasPagamento.length; j++) {
+            System.out.println("[" + j + "]" + formasPagamento[j]);
+        }
+        System.out.print("Sua forma de pagamento escolhida é: ");
+        Integer posicaoFormaPagamentoEscolhida = scanner.nextInt();
+        posicaoValida = posicaoFormaPagamentoEscolhida >= 0
+                && posicaoFormaPagamentoEscolhida < formasPagamento.length;//Aproveitando a variavel booleana 'posicaoValida'!
+        if (!posicaoValida) {
+            statusexit();//MÉTODO do exercício
+        }
+        String cursoEscolhido = cursos[posicaoCursoEscolhido];
+        String formadePagamentoEscolhida = formasPagamento[posicaoFormaPagamentoEscolhida];
+        imprimirTraco();
+        System.out.println("O curso escolhido foi [" + cursoEscolhido + "]" + " e a forma de pagamento é [" + formadePagamentoEscolhida + "]");
+        scanner.close();
+    }
+
+    private static void imprimirTraco() {//MÉTODO 'imprimirTroco'
+        System.out.println("----------------------------------------------------------------------------");
+    }
+
+    private static void statusexit() {
+            System.err.println("Posição inválida!");
+            System.exit(1);
+        }
+    }
+
+
