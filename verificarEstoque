@@ -1,0 +1,31 @@
+package exercicios1_14;
+
+import java.util.Scanner;
+
+public class verificarEstoque {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        ProdutoEstoque produtoEstoque = new ProdutoEstoque();
+
+        System.out.print("Digite o nome do produto: ");
+        produtoEstoque.nome = scanner.next();
+
+        System.out.print("Digite a quantidade do estoque: ");
+        produtoEstoque.quantidadeEstoque = scanner.nextInt();
+
+        verificarMinimaDeEstoque(produtoEstoque);
+        scanner.close();
+    }
+
+    private static void verificarMinimaDeEstoque(ProdutoEstoque produtoEstoque) {
+        Boolean quantidadeMinimaDeEstoque = produtoEstoque.quantidadeEstoque < 10;
+
+        if (quantidadeMinimaDeEstoque) {
+            System.out.println("Nós não temos estoque para o produto: " + produtoEstoque.nome);
+        } else {
+            System.out.println("Temos estoque para o produto: " + produtoEstoque.nome);
+        }
+
+    }
+}
+
