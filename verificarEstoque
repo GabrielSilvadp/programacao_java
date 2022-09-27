@@ -5,27 +5,42 @@ import java.util.Scanner;
 public class verificarEstoque {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        ProdutoEstoque produtoEstoque = new ProdutoEstoque();
 
-        System.out.print("Digite o nome do produto: ");
-        produtoEstoque.nome = scanner.next();
+        ProdutoEstoque produtoEstoque = new ProdutoEstoque();//criando a classe
 
-        System.out.print("Digite a quantidade do estoque: ");
+        produtoEstoque.nome = "Iphone 14 Pro Max";
+
+        System.out.println("Bem vindo à Apple");
+
+        imprimirLinha();
+
+        System.out.print("Digite a quantidade de estoque do produto <" + produtoEstoque.nome + "> : ");
         produtoEstoque.quantidadeEstoque = scanner.nextInt();
 
-        verificarMinimaDeEstoque(produtoEstoque);
+        imprimirLinha();
+
+        verificarMinimaDeEstoque(produtoEstoque);//Usando o método
+
         scanner.close();
     }
 
+    private static void imprimirLinha() {
+        System.out.println("--------------------------------------------------------");
+    }
+
     private static void verificarMinimaDeEstoque(ProdutoEstoque produtoEstoque) {
+
         Boolean quantidadeMinimaDeEstoque = produtoEstoque.quantidadeEstoque < 10;
 
         if (quantidadeMinimaDeEstoque) {
-            System.out.println("Nós não temos estoque para o produto: " + produtoEstoque.nome);
+            System.out.println("Infelizmente nossa loja não tem estoque o suficiente para esse produto, favor fazer um pedido para repor o nosso estoque!");
+            imprimirLinha();
+            System.out.println("Obrigado :)");
         } else {
-            System.out.println("Temos estoque para o produto: " + produtoEstoque.nome);
+            System.out.println("Nós temos estoque suficiente para esse produto.");
+            imprimirLinha();
+            System.out.println("Obrigado :)");
         }
-
     }
 }
 
