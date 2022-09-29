@@ -1,0 +1,31 @@
+package exercicios1_14;
+
+import java.util.Scanner;
+
+public class Encapsulamento {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Pedido pedido = new Pedido();
+
+        pedido.setCodigo("D-707");
+        System.out.print("Digite o subtotal: ");
+        pedido.setSubtotal(scanner.nextInt());
+        System.out.print("Digite o desconto: ");
+        pedido.setDesconto(scanner.nextInt());
+
+        System.out.println("Codigo: " + pedido.getCodigo());
+        imprimirLinha();
+        System.out.println("Subtotal: " + pedido.getSubtotal());
+        imprimirLinha();
+        System.out.println("Desconto: " + pedido.getDesconto());
+        imprimirLinha();
+        System.out.println("Total da subtração do SubTotal com Desconto: " + pedido.getTotal());
+        imprimirLinha();
+
+    }
+
+    private static void imprimirLinha() {
+        System.out.println("------------------------------------------------------------");
+    }
+
+}
