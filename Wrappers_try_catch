@@ -1,0 +1,31 @@
+package programacao_orientada_a_objetos._2_9_java_4_1_wrappers_do_java_lang;
+
+public class Principal6 {
+    public static void main(String[] args) {
+        //Tipos primitivos: byte, short, int, long, float, double e char //tipos primitivos são com letra minúscula.
+        //Wrappers: Byte, Short, Integer, Long, Float, Double, Character //wrappers são com letra MAIÚSCULA.
+        int x = 10;
+        Integer i = new Integer(10);
+        //Integer i = valueOf(10);
+        //Integer i = x;
+        //byte b = i.byteValue();
+        //xxxValue();
+
+        String valor = "15.5";
+        //Float v = new Float(valor);
+        Float v = new Float(valor);
+        System.out.println(v + 3);
+
+        int idade = Integer.parseInt("27"); //parseXXX
+        System.out.println("Daqui 5 anos você terá: " + (idade + 5) + " anos.");
+
+        try{
+            double custo = Double.parseDouble("Vinte e três reais e cinquenta centavos");
+            System.out.println("Custo total: " + custo);
+        }catch (NumberFormatException e) {
+            System.err.println("Número inválido para conversão");
+
+        }
+
+    }
+}
