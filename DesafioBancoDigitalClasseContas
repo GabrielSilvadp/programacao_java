@@ -1,0 +1,30 @@
+package DesafioBanco;
+
+public class Contas {
+    int saldo;
+    int limiteConta;
+    int rendimentoConta;
+
+    void saldoContas() {
+        saldoContas(1);
+
+    }
+
+    void saldoContas(int escolhaDeContas) {
+        if (escolhaDeContas == 1) {
+            System.out.println("Você escolheu a <Conta Corrente>");
+            System.out.println("O saldo da conta é: R$" + saldo);
+            System.out.println("O limite da conta é: " + limiteConta);
+        } else if (escolhaDeContas == 2) {
+            System.out.println("Você escolheu a <Conta Poupança>");
+            System.out.println("O saldo da conta é: R$" + saldo);
+            System.out.println("O rendimento da conta é: " + rendimentoConta);
+        } else if (escolhaDeContas == 3) {
+            System.out.println("Você escolheu a <Conta comum>");
+            System.out.println("O saldo é: R$" + saldo);
+        } else {
+            System.err.println("Escolha incorreta");
+        }
+
+    }
+}
