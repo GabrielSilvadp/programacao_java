@@ -1,0 +1,11 @@
+package DesafioBanco;
+
+public class TesteContas {
+    public static void main(String[] args) {
+        Contas contas = new Contas();
+        contas.saldo = 2500;
+        contas.limiteConta = 4100;
+        contas.rendimentoConta = 200;
+        contas.saldoContas();
+    }
+}
